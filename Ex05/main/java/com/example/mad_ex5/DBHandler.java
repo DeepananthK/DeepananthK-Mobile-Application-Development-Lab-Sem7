@@ -61,9 +61,9 @@ public class DBHandler extends SQLiteOpenHelper {
         if (PersonalInfoCursor.moveToFirst()) {
             do {
                 PersonalInfoList.add(new PersonalInfoModal(PersonalInfoCursor.getInt(0),PersonalInfoCursor.getString(1),
-                        PersonalInfoCursor.getString(4),
                         PersonalInfoCursor.getString(2),
-                        PersonalInfoCursor.getString(3)));
+                        PersonalInfoCursor.getString(3),
+                        PersonalInfoCursor.getString(4)));
             } while (PersonalInfoCursor.moveToNext());
         }
         PersonalInfoCursor.close();
@@ -77,9 +77,9 @@ public class DBHandler extends SQLiteOpenHelper {
 
         if (PersonalInfoCursor.moveToFirst()) {
             return new PersonalInfoModal(PersonalInfoCursor.getInt(0),PersonalInfoCursor.getString(1),
-                        PersonalInfoCursor.getString(4),
                         PersonalInfoCursor.getString(2),
-                        PersonalInfoCursor.getString(3));
+                        PersonalInfoCursor.getString(3),
+                        PersonalInfoCursor.getString(4));
 
         }
         PersonalInfoCursor.close();

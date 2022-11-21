@@ -41,6 +41,7 @@ public class Update extends AppCompatActivity {
     public void openEditActivity(PersonalInfoModal info) {
         System.out.println("Trying to open Edit Activity");
         Intent intent = new Intent(this, Edit.class);
+        System.out.println(info.getName()+":"+info.getAddress()+":"+info.getPhone()+":"+info.getEmail());
         intent.putExtra("info",info.getName()+":"+info.getAddress()+":"+info.getPhone()+":"+info.getEmail());
         startActivity(intent);
     }
